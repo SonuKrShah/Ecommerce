@@ -29,15 +29,14 @@ if (isset($_GET['type']) && $_GET['type'] != '') {
 $sql = "select product.*,categories.category from product,categories where product.category_id=categories.id order by product.id desc";
 $res = mysqli_query($con, $sql);
 ?>
-
 <div class="content pb-0">
     <div class="orders">
         <div class="row">
             <div class="col-xl-12">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body split-header">
                         <h4 class="box-title">Products </h4>
-                        <h4 class="box-link"><a href="manage_product.php">Add Product</a></h4>
+                        <h4 class="box-link add-borders"><a href="manage_product.php">Add Product &nbsp;<i class="fas fa-plus"></i></a></h4>
                     </div>
                     <div class="card-body--">
                         <div class="table-stats order-table ov-h">
@@ -66,8 +65,7 @@ $res = mysqli_query($con, $sql);
                                             <td><?php echo $row['category'] ?></td>
                                             <td><?php echo $row['name'] ?></td>
                                             <td><img src="<?php echo PRODUCT_IMAGE_SERVER_PATH . $row['image']
-                                                            ?>" alt=<?php echo PRODUCT_IMAGE_SERVER_PATH.$row['image']
-                                                                        ?> /></td>
+                                                            ?>" /></td>
                                             <!-- <td>Image</td> -->
                                             <td><?php echo $row['mrp'] ?></td>
                                             <td><?php echo $row['price'] ?></td>

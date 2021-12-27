@@ -5,7 +5,7 @@ require_once('functions.inc.php');
 $msg = "";
 
 if(isset($_SESSION['ADMIN_LOGIN'])){
-    header("location:dashborad.php");
+    header("location:categories.php");
 }
 // Checking for post requests.
 if (isset($_POST['submit'])) {
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
         $_SESSION["ADMIN_LOGIN"] = 'yes';
         $_SESSION["ADMIN_USERNAME"] = $username;
         // Redirecting to the admin panel.
-        header("location:dashborad.php");
+        header("location:categories.php");
         die();
     } else {
         // Error message.

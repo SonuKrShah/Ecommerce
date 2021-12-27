@@ -1,5 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700';
+
+a {
+  text-decoration: none !important;
+}
+
 .bg-flat-color-1 {
   background: #00c292;
 }
@@ -3391,9 +3396,26 @@ footer.site-footer .footer-inner a {
 }
 
 .card .box-link a {
-  color: #000;
-  text-decoration: underline;
+  color: #fff;
+  text-decoration: none;
 }
 .badge a {
   color: #fff;
+}
+
+.split-header {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.split-header .add-borders {
+  background-color: orangered !important;
+  border-radius: 5px !important;
+  padding: 14px !important;
+  box-shadow: 0 0 4px black !important;
+  transition: all 200ms ease-in-out !important;
+}
+
+.split-header .add-borders:hover {
+  transform: scale(1.05) !important;
 }

@@ -2,6 +2,8 @@
 require("top.inc.php");
 $categories = "";
 $msg = "";
+
+// Check if we are visiting the page to edit or add new categories
 if (isset($_GET['id']) && $_GET['id'] != "") {
     $id = get_safe_value($con, $_GET['id']);
     $sql = "SELECT * FROM categories WHERE id='$id'";
@@ -11,7 +13,7 @@ if (isset($_GET['id']) && $_GET['id'] != "") {
         $row = mysqli_fetch_assoc($res);
         $categories = $row['category'];
     } else {
-        header('location:dashborad.php');
+        header('location:categories.php');
         die();
     }
 }
@@ -31,20 +33,17 @@ if (isset($_POST['submit'])) {
             $msg = "Categories already exist";
         }
     }
-
     if ($msg == '') {
         if (isset($_GET['id']) && $_GET['id'] != '') {
-            mysqli_query($con, "update categories set categories='$categories' where id='$id'");
+            mysqli_query($con, "update categories set category='$categories' where id='$id'");
         } else {
-            mysqli_query($con, "insert into categories(categories,status) values('$categories','1')");
+            mysqli_query($con, "insert into categories(category,status) values('$categories','1')");
         }
-        header('location:dashborad.php');
+        header('location:categories.php');
         die();
     }
 }
-
 ?>
-
 <div class="content pb-0">
     <div class="animated fadeIn">
         <div class="row">

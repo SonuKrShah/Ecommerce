@@ -1,10 +1,10 @@
 <?php
-    require_once('connection.inc.php');
-    require_once('functions.inc.php');
-    if(!isset($_SESSION['ADMIN_LOGIN']) || $_SESSION['ADMIN_LOGIN'] == ""){
-        header('location:login.php');
-        die();
-    }
+require_once('connection.inc.php');
+require_once('functions.inc.php');
+if (!isset($_SESSION['ADMIN_LOGIN']) || $_SESSION['ADMIN_LOGIN'] == "") {
+    header('location:login.php');
+    die();
+}
 ?>
 
 <!doctype html>
@@ -16,14 +16,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dashboard Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/pe-icon-7-filled.css">
-    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/pe-icon-7-filled.css">
+    <link rel="stylesheet" href="./assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="./assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 
@@ -37,7 +38,7 @@
                         <a href="#"> Dashboard</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="dashborad.php"> Catelogs</a>
+                        <a href="categories.php"> Categories</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="product.php"> Products</a>
